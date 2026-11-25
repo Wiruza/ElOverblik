@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Forbind til Eloverblik",
+        "description": "Indsæt din Eloverblik-token. Du får en på eloverblik.dk: log ind med MitID, åbn menuen med dit navn, vælg \"Datadeling\" og derefter \"Opret token\".",
+        "data": {
+          "refresh_token": "Eloverblik-token"
+        }
+      },
+      "meter": {
+        "title": "Vælg din måler",
+        "description": "Vælg det målepunkt, der skal følges, og hvor meget historik der hentes første gang.",
+        "data": {
+          "metering_point": "Måler",
+          "history_days": "Historik der hentes"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Ny Eloverblik-token nødvendig",
+        "description": "Eloverblik godkender ikke længere din token (en token gælder op til et år og kan slås fra). Opret en ny på eloverblik.dk og indsæt den her.",
+        "data": {
+          "refresh_token": "Eloverblik-token"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Eloverblik godkendte ikke din token. Tjek at du har kopieret det hele, eller opret en ny.",
+      "rate_limited": "Eloverblik fik for mange forespørgsler (der må kun logges ind to gange i minuttet). Vent et minut og prøv igen.",
+      "cannot_connect": "Kunne ikke få forbindelse til Eloverblik. Prøv igen om et par minutter.",
+      "no_meters": "Eloverblik viser ingen tilknyttede målere for denne token. Tilknyt din måler på eloverblik.dk (eller med Power Monitor) og prøv igen.",
+      "wrong_meter": "Denne token giver ikke adgang til den måler, som denne opsætning følger."
+    },
+    "abort": {
+      "already_configured": "Alle målere for denne token er allerede sat op.",
+      "reauth_successful": "Den nye token virker. Aflæsningerne fortsætter."
+    }
+  },
+  "selector": {
+    "history_days": {
+      "options": {
+        "30": "30 dage",
+        "90": "3 måneder",
+        "365": "1 år",
+        "730": "2 år"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "latest_day": { "name": "Seneste hele døgn" },
+      "last_7_days": { "name": "Seneste 7 dage" },
+      "this_month": { "name": "Denne måned" },
+      "last_month": { "name": "Sidste måned" },
+      "this_year": { "name": "I år" },
+      "latest_hour": { "name": "Seneste time" },
+      "data_until": { "name": "Aflæsninger til" }
+    }
+  }
+}

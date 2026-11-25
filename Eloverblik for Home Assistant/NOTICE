@@ -1,0 +1,18 @@
+Eloverblik (Power Monitor) – Home Assistant integration
+
+This is a fork of "homeassistant-eloverblik" by Jonas Pedersen (JonasPed),
+https://github.com/JonasPed/homeassistant-eloverblik, licensed under the Apache License 2.0
+(see LICENSE).
+
+Changed in this fork (2026-11):
+* The pyeloverblik/requests dependency is replaced by a small async client (api.py) on
+  Home Assistant's own connection, following Eloverblik's published customer API.
+* The setup asks for the key and lets you pick the meter from a list; a re-authentication
+  step asks for a new key when the old one expires.
+* One coordinator fetches readings every two hours and keeps them in Home Assistant's storage.
+* Sensors match the Power Monitor desktop app (latest full day, last 7 days, this month,
+  last month, this year, latest hour, readings until), with the same entity ids.
+* The hourly history goes into the external statistic eloverblik:consumption_<meter id>,
+  the same one the Power Monitor desktop app fills.
+* The tariff, meter-reading and 24 separate hourly sensors of the original are not included.
+Every changed source file says at its top that it is a changed copy of the original.

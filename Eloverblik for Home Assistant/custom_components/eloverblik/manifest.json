@@ -1,0 +1,13 @@
+{
+  "domain": "eloverblik",
+  "name": "Eloverblik (Power Monitor)",
+  "codeowners": [],
+  "config_flow": true,
+  "dependencies": ["recorder"],
+  "documentation": "https://github.com/JonasPed/homeassistant-eloverblik",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/JonasPed/homeassistant-eloverblik/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
